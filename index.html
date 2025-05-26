@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendGPT - AIが厳選する最新トレンド情報を毎日お届け</title>
+    <meta name="description" content="AIが24時間体制で収集・分析した最新のテクノロジートレンドを毎日あなたのメールボックスへ。7日間無料でお試しいただけます。">
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>🤖 TrendGPT</h1>
+                <p class="subtitle">AIが24時間体制で収集・分析した最新トレンド情報を毎日お届け</p>
+                <div class="trial-badge">7日間無料トライアル</div>
+            </div>
+        </header>
+
+        <section class="service-overview">
+            <h2>AIが見つける、明日のトレンド</h2>
+            <p class="service-description">
+                TrendGPTは、AI技術を駆使して世界中のテクノロジー情報を24時間体制で監視・分析。
+                膨大な情報の中から本当に価値のあるトレンドだけを厳選し、専門的な解説とともに毎日お届けします。
+            </p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">🔍</div>
+                    <h3>AI自動収集</h3>
+                    <p>世界中のニュースサイト、論文、SNSから重要な情報を自動収集</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>トレンド分析</h3>
+                    <p>独自のAIアルゴリズムで注目度と重要度を総合的に分析</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3>専門解説</h3>
+                    <p>技術的な内容もわかりやすく解説し、ビジネスへの影響も考察</p>
+                </div>
+            </div>
+
+            <div class="email-preview">
+                <h3>📧 配信メールイメージ</h3>
+                <p>実際に配信されるメールのサンプルです（画像準備中）</p>
+                <div class="email-mockup">
+                    <div class="email-header">TrendGPT Daily - 2025年5月25日</div>
+                    <div class="email-content">
+                        <div class="email-item">
+                            <span class="email-category">🤖 AI</span>
+                            <h4>OpenAI、新しいマルチモーダルAIを発表</h4>
+                            <p>テキスト、画像、音声を統合的に処理する新技術により...</p>
+                        </div>
+                        <div class="email-item">
+                            <span class="email-category">📱 ガジェット</span>
+                            <h4>Apple、折りたたみiPhone特許を取得</h4>
+                            <p>2026年の製品化に向けて開発が加速している模様...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <form id="subscription-form" class="subscription-form">
+            <h2>📝 登録情報入力</h2>
+            
+            <div class="form-section">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="same-email" onchange="toggleEmailFields()" checked>
+                    <label for="same-email">配信先と支払い用メールアドレスを同じにする</label>
+                </div>
+            </div>
+            
+            <div id="single-email-group" class="form-section">
+                <label for="single-email">メールアドレス</label>
+                <input type="email" id="single-email" required placeholder="your-email@example.com">
+            </div>
+            
+            <div id="separate-email-group" class="form-section" style="display: none;">
+                <label for="delivery-email">配信先メールアドレス</label>
+                <input type="email" id="delivery-email" placeholder="newsletter@yourcompany.com">
+                
+                <label for="payment-email">支払い用メールアドレス</label>
+                <input type="email" id="payment-email" placeholder="billing@yourcompany.com">
+                <small>※ 請求書・領収書の送付先になります</small>
+            </div>
+            
+            <div class="form-section">
+                <label for="subscriber-name">登録者名</label>
+                <input type="text" id="subscriber-name" required placeholder="山田太郎">
+            </div>
+            
+            <div class="form-section">
+                <label>プラン選択</label>
+                <div class="plan-options">
+                    <div class="plan-option" data-plan="individual">
+                        <input type="radio" name="plan" value="individual" id="plan-individual" checked>
+                        <label for="plan-individual">
+                            <div class="plan-info">
+                                <span class="plan-name">個人プラン</span>
+                                <span class="plan-price">¥500/月</span>
+                            </div>
+                            <div class="plan-desc">個人利用向け</div>
+                        </label>
+                    </div>
+                    
+                    <div class="plan-option" data-plan="small-team">
+                        <input type="radio" name="plan" value="small-team" id="plan-small-team">
+                        <label for="plan-small-team">
+                            <div class="plan-info">
+                                <span class="plan-name">小規模チーム</span>
+                                <span class="plan-price">¥1,500/月</span>
+                            </div>
+                            <div class="plan-desc">10人までの配信</div>
+                        </label>
+                    </div>
+                    
+                    <div class="plan-option" data-plan="large-team">
+                        <input type="radio" name="plan" value="large-team" id="plan-large-team">
+                        <label for="plan-large-team">
+                            <div class="plan-info">
+                                <span class="plan-name">大規模チーム</span>
+                                <span class="plan-price">¥3,000/月</span>
+                            </div>
+                            <div class="plan-desc">11人以上の配信</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <label>配信カテゴリ</label>
+                <div class="category-options">
+                    <div class="category-option">
+                        <input type="radio" name="category" value="AI" id="category-ai" checked>
+                        <label for="category-ai">🤖 AI</label>
+                    </div>
+                    <div class="category-option">
+                        <input type="radio" name="category" value="ガジェット" id="category-gadget">
+                        <label for="category-gadget">📱 ガジェット</label>
+                    </div>
+                    <div class="category-option">
+                        <input type="radio" name="category" value="テック" id="category-tech">
+                        <label for="category-tech">💻 テック</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <label>メール形式</label>
+                <div class="format-options">
+                    <div class="format-option">
+                        <input type="radio" name="email-format" value="html" id="format-html" checked>
+                        <label for="format-html">
+                            <span class="format-name">HTML形式</span>
+                            <span class="format-desc">リッチなデザイン</span>
+                        </label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" name="email-format" value="plain" id="format-plain">
+                        <label for="format-plain">
+                            <span class="format-name">テキスト形式</span>
+                            <span class="format-desc">シンプルで軽量</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree-terms" required>
+                    <label for="agree-terms">
+                        <a href="#" onclick="showModal('terms')">利用規約</a>、
+                        <a href="#" onclick="showModal('privacy')">プライバシーポリシー</a>、
+                        <a href="#" onclick="showModal('commerce')">特定商取引法に基づく表記</a>
+                        に同意します
+                    </label>
+                </div>
+            </div>
+            
+            <div class="error-message" id="form-error"></div>
+            
+            <button type="submit" class="submit-btn" id="submit-btn" disabled>
+                7日間無料で始める
+            </button>
+        </form>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>決済画面に移動中...</p>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
