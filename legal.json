@@ -5,32 +5,32 @@
     {
       "type": "section",
       "title": "販売業者の名称",
-      "content": "TrendGPT株式会社"
+      "content": "MANO MONO"
     },
     {
       "type": "section", 
       "title": "運営統括責任者",
-      "content": "山田太郎"
+      "content": "川島大地"
     },
     {
       "type": "section",
       "title": "所在地",
-      "content": "〒100-0001 東京都千代田区千代田1-1-1 TrendGPTビル5F"
+      "content": "〒152-0035 東京都目黒区自由が丘二丁目十六番十二号 RJ3"
     },
     {
       "type": "section",
       "title": "電話番号",
-      "content": "03-1234-5678\n受付時間：平日10:00-18:00（土日祝を除く）"
+      "content": "050-5343-7214\n受付時間：平日10:00-18:00（土日祝を除く）"
     },
     {
       "type": "section",
       "title": "メールアドレス",
-      "content": "support@trendgpt.com"
+      "content": "trendgpt@manomono.net"
     },
     {
       "type": "section",
       "title": "販売価格",
-      "content": "個人プラン（5件/日）：月額480円（税込）\n個人プラン（10件/日）：月額780円（税込）\n小規模チーム（2-10人、5件/日）：月額1,200円（税込）\n小規模チーム（2-10人、10件/日）：月額1,800円（税込）\n大規模チーム（11人以上、5件/日）：月額2,400円（税込）\n大規模チーム（11人以上、10件/日）：月額3,200円（税込）\n\n※7日間の無料トライアル期間があります"
+      "content": "ベーシックプラン（5件/日）：月額480円（税込）\nスタンダードプラン（10件/日）：月額780円（税込）\nプレミアムプラン（15件/日）：月額1,180円（税込）\nアルティメットプラン（20件/日）：月額1,580円（税込）\n\n※7日間の無料トライアル期間があります\n※配信先は個人のメールアドレスのみ。メーリングリスト配信は禁止されており、発覚した場合は強制退会となります"
     },
     {
       "type": "section",
@@ -60,7 +60,7 @@
     {
       "type": "section",
       "title": "ソフトウェアの動作環境",
-      "content": "必要な環境：\n・インターネット接続環境\n・メール受信が可能な環境\n・HTML形式メールの受信に対応したメールクライアント（HTML形式選択時）\n\n推奨ブラウザ（管理画面利用時）：\n・Google Chrome（最新版）\n・Mozilla Firefox（最新版）\n・Safari（最新版）\n・Microsoft Edge（最新版）\n\n推奨メールクライアント：\n・Gmail、Outlook、Apple Mail、Thunderbird等の主要メールクライアント\n\n※上記環境以外での動作は保証いたしかねます。"
+      "content": "必要な環境：\n・インターネット接続環境\n・メール受信が可能な環境\n・HTML形式メールの受信に対応したメールクライアント（HTML形式選択時）\n\n推奨ブラウザ：\n・Google Chrome（最新版）\n・Mozilla Firefox（最新版）\n・Safari（最新版）\n・Microsoft Edge（最新版）\n\n推奨メールクライアント：\n・Gmail、Outlook、Apple Mail、Thunderbird等の主要メールクライアント\n\n※上記環境以外での動作は保証いたしかねます。"
     }
   ]
 }

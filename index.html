@@ -14,7 +14,7 @@
             <div class="hero-content">
                 <h1>🤖 TrendGPT</h1>
                 <p class="subtitle">AIが24時間体制で収集・分析した注目のテック情報を毎日10-11時にお届け</p>
-                <div class="trial-badge">7日間無料トライアル</div>
+                <div class="trial-badge">7日間無料トライアル（期間後自動課金）</div>
             </div>
         </header>
 
@@ -24,6 +24,7 @@
                 TrendGPTは、AI技術を駆使して世界中のテクノロジー情報を24時間体制で監視・分析。
                 前日に話題となった記事の中から本当に価値のある情報だけを厳選し、専門的な解説とともに毎朝お届けします。
                 <strong>英語記事も日本語で要約</strong>するので、グローバルなトレンドを効率的にキャッチアップできます。
+                <strong>AI、ガジェット、テックの3つのカテゴリから選択</strong>して、あなたの関心に合った情報をお受け取りいただけます。
             </p>
             
             <div class="features">
@@ -34,8 +35,8 @@
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">📊</div>
-                    <h3>注目度分析</h3>
-                    <p>独自のAIアルゴリズムで話題性と重要度を総合的に分析・ランキング</p>
+                    <h3>カテゴリ別分析</h3>
+                    <p>AI、ガジェット、テックの3つのカテゴリから選択し、特化した情報をお届け</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">🌏</div>
@@ -66,13 +67,13 @@
             </div>
             
             <div id="single-email-group" class="form-section">
-                <label for="single-email">メールアドレス</label>
+                <label for="single-email">メールアドレス（個人のメールアドレスのみ）</label>
                 <input type="email" id="single-email" required placeholder="your-email@example.com">
             </div>
             
             <div id="separate-email-group" class="form-section" style="display: none;">
-                <label for="delivery-email">配信先メールアドレス</label>
-                <input type="email" id="delivery-email" placeholder="newsletter@yourcompany.com">
+                <label for="delivery-email">配信先メールアドレス（個人のメールアドレスのみ）</label>
+                <input type="email" id="delivery-email" placeholder="your-personal-email@example.com">
                 
                 <label for="payment-email">支払い用メールアドレス</label>
                 <input type="email" id="payment-email" placeholder="billing@yourcompany.com">
@@ -85,75 +86,72 @@
             </div>
             
             <div class="form-section">
+                <label>配信カテゴリ選択</label>
+                <div class="category-options">
+                    <div class="category-option">
+                        <input type="radio" name="category" value="ai" id="category-ai" checked>
+                        <label for="category-ai">AI</label>
+                    </div>
+                    <div class="category-option">
+                        <input type="radio" name="category" value="gadget" id="category-gadget">
+                        <label for="category-gadget">ガジェット</label>
+                    </div>
+                    <div class="category-option">
+                        <input type="radio" name="category" value="tech" id="category-tech">
+                        <label for="category-tech">テック</label>
+                    </div>
+                </div>
+                <p class="note">※ 選択したカテゴリに特化した記事をお届けします</p>
+            </div>
+            
+            <div class="form-section">
                 <label>プラン選択</label>
                 <div class="plan-options">
-                    <div class="plan-option" data-plan="individual-5">
-                        <input type="radio" name="plan" value="individual-5" id="plan-individual-5" checked>
-                        <label for="plan-individual-5">
+                    <div class="plan-option" data-plan="basic-5">
+                        <input type="radio" name="plan" value="basic-5" id="plan-basic-5" checked>
+                        <label for="plan-basic-5">
                             <div class="plan-info">
-                                <span class="plan-name">個人プラン（5件/日）</span>
-                                <span class="plan-price"><s>¥480/月</s> <strong style="color: red;">¥150/月 (69% OFF)</strong></span>
+                                <span class="plan-name">ベーシック（5件/日）</span>
+                                <span class="plan-price">¥480/月</span>
                             </div>
-                            <div class="plan-desc">個人利用向け、厳選された1日5件の記事。<strong>7日間無料トライアル付き</strong></div>
+                            <div class="plan-desc">厳選された1日5件の記事をお届け</div>
                         </label>
                     </div>
                     
-                    <div class="plan-option" data-plan="individual-10">
-                        <input type="radio" name="plan" value="individual-10" id="plan-individual-10">
-                        <label for="plan-individual-10">
+                    <div class="plan-option" data-plan="standard-10">
+                        <input type="radio" name="plan" value="standard-10" id="plan-standard-10">
+                        <label for="plan-standard-10">
                             <div class="plan-info">
-                                <span class="plan-name">個人プラン（10件/日）</span>
-                                <span class="plan-price"><s>¥780/月</s> <strong style="color: red;">¥240/月 (69% OFF)</strong></span>
+                                <span class="plan-name">スタンダード（10件/日）</span>
+                                <span class="plan-price">¥780/月</span>
                             </div>
-                            <div class="plan-desc">個人利用向け、より幅広い1日10件の記事。<strong>7日間無料トライアル付き</strong></div>
+                            <div class="plan-desc">幅広い情報を1日10件でお届け</div>
                         </label>
                     </div>
                     
-                    <div class="plan-option" data-plan="small-team-5">
-                        <input type="radio" name="plan" value="small-team-5" id="plan-small-team-5">
-                        <label for="plan-small-team-5">
+                    <div class="plan-option" data-plan="premium-15">
+                        <input type="radio" name="plan" value="premium-15" id="plan-premium-15">
+                        <label for="plan-premium-15">
                             <div class="plan-info">
-                                <span class="plan-name">小規模チーム（2〜10人、5件/日）</span>
-                                <span class="plan-price"><s>¥1,200/月</s> <strong style="color: red;">¥360/月 (70% OFF)</strong></span>
+                                <span class="plan-name">プレミアム（15件/日）</span>
+                                <span class="plan-price">¥1,180/月</span>
                             </div>
-                            <div class="plan-desc">2〜10人向け、1日5件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
+                            <div class="plan-desc">充実した情報を1日15件でお届け</div>
                         </label>
                     </div>
                     
-                    <div class="plan-option" data-plan="small-team-10">
-                        <input type="radio" name="plan" value="small-team-10" id="plan-small-team-10">
-                        <label for="plan-small-team-10">
+                    <div class="plan-option" data-plan="ultimate-20">
+                        <input type="radio" name="plan" value="ultimate-20" id="plan-ultimate-20">
+                        <label for="plan-ultimate-20">
                             <div class="plan-info">
-                                <span class="plan-name">小規模チーム（2〜10人、10件/日）</span>
-                                <span class="plan-price"><s>¥1,800/月</s> <strong style="color: red;">¥540/月 (70% OFF)</strong></span>
+                                <span class="plan-name">アルティメット（20件/日）</span>
+                                <span class="plan-price">¥1,580/月</span>
                             </div>
-                            <div class="plan-desc">2〜10人向け、1日10件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
-                        </label>
-                    </div>
-                    
-                    <div class="plan-option" data-plan="large-team-5">
-                        <input type="radio" name="plan" value="large-team-5" id="plan-large-team-5">
-                        <label for="plan-large-team-5">
-                            <div class="plan-info">
-                                <span class="plan-name">大規模チーム（11人以上、5件/日）</span>
-                                <span class="plan-price"><s>¥2,400/月</s> <strong style="color: red;">¥720/月 (70% OFF)</strong></span>
-                            </div>
-                            <div class="plan-desc">11人以上向け、1日5件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
-                        </label>
-                    </div>
-                    
-                    <div class="plan-option" data-plan="large-team-10">
-                        <input type="radio" name="plan" value="large-team-10" id="plan-large-team-10">
-                        <label for="plan-large-team-10">
-                            <div class="plan-info">
-                                <span class="plan-name">大規模チーム（11人以上、10件/日）</span>
-                                <span class="plan-price"><s>¥3,200/月</s> <strong style="color: red;">¥960/月 (70% OFF)</strong></span>
-                            </div>
-                            <div class="plan-desc">11人以上向け、1日10件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
+                            <div class="plan-desc">最大限の情報を1日20件でお届け</div>
                         </label>
                     </div>
                 </div>
-                <p class="note">※ 複数人向けプランでは、ユーザー側のシステムでメーリングリストのシステムを設定し、そのメールアドレスを使用して配信を行います。</p>
+                <p class="note">※ 配信先は個人のメールアドレスのみとなります。メーリングリストでの配信は禁止されており、発覚した場合は退会となります。</p>
             </div>
             
             <div class="form-section">
@@ -168,10 +166,21 @@
                 </div>
             </div>
             
+            <div class="important-notice">
+                <h3>⚠️ ご利用前に必ずお読みください</h3>
+                <ul>
+                    <li><strong>自動課金について：</strong>7日間の無料トライアル期間終了後、自動的に有料プランに移行し月額料金が課金されます</li>
+                    <li><strong>配信先制限について：</strong>配信先は個人のメールアドレスのみです。メーリングリスト、グループメール等への配信は禁止されており、発覚した場合は即座に強制退会となります</li>
+                    <li><strong>サービス停止について：</strong>システムメンテナンス、障害、その他当社が必要と判断した場合、予告なくサービスを停止することがあります</li>
+                    <li><strong>配信の安定性について：</strong>技術的な問題により配信が遅延・停止する場合があります。配信不具合による損害については責任を負いかねます</li>
+                    <li><strong>免責事項：</strong>本サービス利用に関する損害について、当社は一切の責任を負いません（詳細は利用規約をご確認ください）</li>
+                </ul>
+            </div>
+
             <div class="error-message" id="form-error"></div>
             
             <button type="submit" class="submit-btn" id="submit-btn" disabled>
-                7日間無料で始める
+                上記に同意して7日間無料で始める
             </button>
         </form>
         
