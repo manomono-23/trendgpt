@@ -10,12 +10,12 @@
     // DOM要素取得
     const elements = {
         sameEmailCheckbox: document.getElementById('same-email'),
-        singleEmailGroup: document.getElementById('single-email-group'),
+        singleEmailGroup: document.getElementById('singleEmail-group'),
         separateEmailGroup: document.getElementById('separate-email-group'),
-        singleEmail: document.getElementById('single-email'),
-        deliveryEmail: document.getElementById('delivery-email'),
-        paymentEmail: document.getElementById('payment-email'),
-        subscriberName: document.getElementById('subscriber-name'),
+        singleEmail: document.getElementById('singleEmail'),
+        deliveryEmail: document.getElementById('deliveryEmail'),
+        paymentEmail: document.getElementById('paymentEmail'),
+        subscriberName: document.getElementById('subscriberName'),
         agreeTerms: document.getElementById('agree-terms'),
         submitBtn: document.getElementById('submit-btn'),
         form: document.getElementById('subscription-form'),
