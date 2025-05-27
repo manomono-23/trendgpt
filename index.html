@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendGPT - AIが厳選する最新トレンド情報を毎日お届け</title>
-    <meta name="description" content="AIが24時間体制で収集・分析した最新のテクノロジートレンドを毎日あなたのメールボックスへ。7日間無料でお試しいただけます。">
+    <title>TrendGPT - AIが厳選する注目のテック情報を毎日お届け</title>
+    <meta name="description" content="AIが24時間体制で世界中のテック情報を収集・分析し、注目記事を厳選して毎日10-11時にお届け。英語記事も日本語で要約。7日間無料でお試しいただけます。">
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,55 +12,46 @@
     <div class="container">
         <header class="hero">
             <div class="hero-content">
-                <h1>TrendGPT</h1>
-                <p class="subtitle">AIが24時間体制で収集・分析した最新トレンド情報を毎日お届け</p>
+                <h1>🤖 TrendGPT</h1>
+                <p class="subtitle">AIが24時間体制で収集・分析した注目のテック情報を毎日10-11時にお届け</p>
                 <div class="trial-badge">7日間無料トライアル</div>
             </div>
         </header>
 
         <section class="service-overview">
-            <h2>AIが見つける、明日のトレンド</h2>
+            <h2>AIが見つける、今日知るべきテック情報</h2>
             <p class="service-description">
                 TrendGPTは、AI技術を駆使して世界中のテクノロジー情報を24時間体制で監視・分析。
-                膨大な情報の中から本当に価値のあるトレンドだけを厳選し、専門的な解説とともに毎日お届けします。
+                前日に話題となった記事の中から本当に価値のある情報だけを厳選し、専門的な解説とともに毎朝お届けします。
+                <strong>英語記事も日本語で要約</strong>するので、グローバルなトレンドを効率的にキャッチアップできます。
             </p>
             
             <div class="features">
                 <div class="feature-item">
                     <div class="feature-icon">🔍</div>
                     <h3>AI自動収集</h3>
-                    <p>世界中のニュースサイト、論文、SNSから重要な情報を自動収集</p>
+                    <p>世界中のニュースサイト、論文、SNSから前日の重要な情報を自動収集</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">📊</div>
-                    <h3>トレンド分析</h3>
-                    <p>独自のAIアルゴリズムで注目度と重要度を総合的に分析</p>
+                    <h3>注目度分析</h3>
+                    <p>独自のAIアルゴリズムで話題性と重要度を総合的に分析・ランキング</p>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">✨</div>
-                    <h3>専門解説</h3>
-                    <p>技術的な内容もわかりやすく解説し、ビジネスへの影響も考察</p>
+                    <div class="feature-icon">🌏</div>
+                    <h3>多言語対応</h3>
+                    <p>英語記事も日本語で要約し、グローバルなトレンドを効率的に把握</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏰</div>
+                    <h3>定時配信</h3>
+                    <p>毎日10-11時の間に配信、朝の情報収集を効率化</p>
                 </div>
             </div>
 
-            <div class="email-preview">
+            <div class="email-preview" style="text-align: center;">
                 <h3>📧 配信メールイメージ</h3>
-                <p>実際に配信されるメールのサンプルです（画像準備中）</p>
-                <div class="email-mockup">
-                    <div class="email-header">TrendGPT Daily - 2025年5月25日</div>
-                    <div class="email-content">
-                        <div class="email-item">
-                            <span class="email-category">🤖 AI</span>
-                            <h4>OpenAI、新しいマルチモーダルAIを発表</h4>
-                            <p>テキスト、画像、音声を統合的に処理する新技術により...</p>
-                        </div>
-                        <div class="email-item">
-                            <span class="email-category">📱 ガジェット</span>
-                            <h4>Apple、折りたたみiPhone特許を取得</h4>
-                            <p>2026年の製品化に向けて開発が加速している模様...</p>
-                        </div>
-                    </div>
-                </div>
+                <img src="/assets/images/gen/projects/trendGPT/sample.png" alt="配信メールイメージ" style="max-width: 100%; height: auto;">
             </div>
         </section>
 
@@ -96,86 +87,82 @@
             <div class="form-section">
                 <label>プラン選択</label>
                 <div class="plan-options">
-                    <div class="plan-option" data-plan="individual">
-                        <input type="radio" name="plan" value="individual" id="plan-individual" checked>
-                        <label for="plan-individual">
+                    <div class="plan-option" data-plan="individual-5">
+                        <input type="radio" name="plan" value="individual-5" id="plan-individual-5" checked>
+                        <label for="plan-individual-5">
                             <div class="plan-info">
-                                <span class="plan-name">個人プラン</span>
-                                <span class="plan-price">¥500/月</span>
+                                <span class="plan-name">個人プラン（5件/日）</span>
+                                <span class="plan-price"><s>¥480/月</s> <strong style="color: red;">¥150/月 (69% OFF)</strong></span>
                             </div>
-                            <div class="plan-desc">個人利用向け</div>
+                            <div class="plan-desc">個人利用向け、厳選された1日5件の記事。<strong>7日間無料トライアル付き</strong></div>
                         </label>
                     </div>
                     
-                    <div class="plan-option" data-plan="small-team">
-                        <input type="radio" name="plan" value="small-team" id="plan-small-team">
-                        <label for="plan-small-team">
+                    <div class="plan-option" data-plan="individual-10">
+                        <input type="radio" name="plan" value="individual-10" id="plan-individual-10">
+                        <label for="plan-individual-10">
                             <div class="plan-info">
-                                <span class="plan-name">小規模チーム</span>
-                                <span class="plan-price">¥1,500/月</span>
+                                <span class="plan-name">個人プラン（10件/日）</span>
+                                <span class="plan-price"><s>¥780/月</s> <strong style="color: red;">¥240/月 (69% OFF)</strong></span>
                             </div>
-                            <div class="plan-desc">10人までの配信</div>
+                            <div class="plan-desc">個人利用向け、より幅広い1日10件の記事。<strong>7日間無料トライアル付き</strong></div>
                         </label>
                     </div>
                     
-                    <div class="plan-option" data-plan="large-team">
-                        <input type="radio" name="plan" value="large-team" id="plan-large-team">
-                        <label for="plan-large-team">
+                    <div class="plan-option" data-plan="small-team-5">
+                        <input type="radio" name="plan" value="small-team-5" id="plan-small-team-5">
+                        <label for="plan-small-team-5">
                             <div class="plan-info">
-                                <span class="plan-name">大規模チーム</span>
-                                <span class="plan-price">¥3,000/月</span>
+                                <span class="plan-name">小規模チーム（2〜10人、5件/日）</span>
+                                <span class="plan-price"><s>¥1,200/月</s> <strong style="color: red;">¥360/月 (70% OFF)</strong></span>
                             </div>
-                            <div class="plan-desc">11人以上の配信</div>
+                            <div class="plan-desc">2〜10人向け、1日5件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
+                        </label>
+                    </div>
+                    
+                    <div class="plan-option" data-plan="small-team-10">
+                        <input type="radio" name="plan" value="small-team-10" id="plan-small-team-10">
+                        <label for="plan-small-team-10">
+                            <div class="plan-info">
+                                <span class="plan-name">小規模チーム（2〜10人、10件/日）</span>
+                                <span class="plan-price"><s>¥1,800/月</s> <strong style="color: red;">¥540/月 (70% OFF)</strong></span>
+                            </div>
+                            <div class="plan-desc">2〜10人向け、1日10件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
+                        </label>
+                    </div>
+                    
+                    <div class="plan-option" data-plan="large-team-5">
+                        <input type="radio" name="plan" value="large-team-5" id="plan-large-team-5">
+                        <label for="plan-large-team-5">
+                            <div class="plan-info">
+                                <span class="plan-name">大規模チーム（11人以上、5件/日）</span>
+                                <span class="plan-price"><s>¥2,400/月</s> <strong style="color: red;">¥720/月 (70% OFF)</strong></span>
+                            </div>
+                            <div class="plan-desc">11人以上向け、1日5件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
+                        </label>
+                    </div>
+                    
+                    <div class="plan-option" data-plan="large-team-10">
+                        <input type="radio" name="plan" value="large-team-10" id="plan-large-team-10">
+                        <label for="plan-large-team-10">
+                            <div class="plan-info">
+                                <span class="plan-name">大規模チーム（11人以上、10件/日）</span>
+                                <span class="plan-price"><s>¥3,200/月</s> <strong style="color: red;">¥960/月 (70% OFF)</strong></span>
+                            </div>
+                            <div class="plan-desc">11人以上向け、1日10件の記事。メーリングリストによる配信。<strong>7日間無料トライアル付き</strong></div>
                         </label>
                     </div>
                 </div>
-            </div>
-            
-            <div class="form-section">
-                <label>配信カテゴリ</label>
-                <div class="category-options">
-                    <div class="category-option">
-                        <input type="radio" name="category" value="AI" id="category-ai" checked>
-                        <label for="category-ai">🤖 AI</label>
-                    </div>
-                    <div class="category-option">
-                        <input type="radio" name="category" value="ガジェット" id="category-gadget">
-                        <label for="category-gadget">📱 ガジェット</label>
-                    </div>
-                    <div class="category-option">
-                        <input type="radio" name="category" value="テック" id="category-tech">
-                        <label for="category-tech">💻 テック</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-section">
-                <label>メール形式</label>
-                <div class="format-options">
-                    <div class="format-option">
-                        <input type="radio" name="email-format" value="html" id="format-html" checked>
-                        <label for="format-html">
-                            <span class="format-name">HTML形式</span>
-                            <span class="format-desc">リッチなデザイン</span>
-                        </label>
-                    </div>
-                    <div class="format-option">
-                        <input type="radio" name="email-format" value="plain" id="format-plain">
-                        <label for="format-plain">
-                            <span class="format-name">テキスト形式</span>
-                            <span class="format-desc">シンプルで軽量</span>
-                        </label>
-                    </div>
-                </div>
+                <p class="note">※ 複数人向けプランでは、ユーザー側のシステムでメーリングリストのシステムを設定し、そのメールアドレスを使用して配信を行います。</p>
             </div>
             
             <div class="form-section">
                 <div class="checkbox-group">
                     <input type="checkbox" id="agree-terms" required>
                     <label for="agree-terms">
-                        <a href="#" onclick="showModal('terms')">利用規約</a>、
-                        <a href="#" onclick="showModal('privacy')">プライバシーポリシー</a>、
-                        <a href="#" onclick="showModal('commerce')">特定商取引法に基づく表記</a>
+                        <a href="javascript:void(0);" onclick="showModal('terms')">利用規約</a>、
+                        <a href="javascript:void(0);" onclick="showModal('privacy')">プライバシーポリシー</a>、
+                        <a href="javascript:void(0);" onclick="showModal('commerce')">特定商取引法に基づく表記</a>
                         に同意します
                     </label>
                 </div>
