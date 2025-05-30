@@ -10,12 +10,12 @@
     // DOM要素取得
     const elements = {
         sameEmailCheckbox: document.getElementById('same-email'),
-        singleEmailGroup: document.getElementById('singleEmail-group'),
+        singleEmailGroup: document.getElementById('single-email-group'),
         separateEmailGroup: document.getElementById('separate-email-group'),
-        singleEmail: document.getElementById('singleEmail'),
-        deliveryEmail: document.getElementById('deliveryEmail'),
-        paymentEmail: document.getElementById('paymentEmail'),
-        subscriberName: document.getElementById('subscriberName'),
+        singleEmail: document.getElementById('single-email'),
+        deliveryEmail: document.getElementById('delivery-email'),
+        paymentEmail: document.getElementById('payment-email'),
+        subscriberName: document.getElementById('subscriber-name'),
         agreeTerms: document.getElementById('agree-terms'),
         submitBtn: document.getElementById('submit-btn'),
         form: document.getElementById('subscription-form'),
@@ -25,6 +25,7 @@
         modalTitle: document.getElementById('modal-title'),
         modalBody: document.getElementById('modal-body')
     };
+    console.log(elements);
     
     // 法的文書データ
     let legalData = {
@@ -178,9 +179,9 @@
         e.preventDefault();
         
         // 重要事項の再確認
-        if (!confirmImportantTerms()) {
-            return;
-        }
+        //if (!confirmImportantTerms()) {
+        //    return;
+        //}
         
         // フォームデータ収集
         const formData = collectFormData();
@@ -195,7 +196,7 @@
         
         try {
             // Stripe Checkoutセッション作成
-            const response = await fetch(`${API_BASE_URL}/createSubscription`, {
+            const response = await fetch(API_BASE_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -204,7 +205,7 @@
                     deliveryEmail: formData.deliveryEmail,
                     paymentEmail: formData.paymentEmail,
                     subscriberName: formData.subscriberName,
-                    planType: formData.planType,
+                    plan: formData.plan,
                     category: formData.category,
                     emailFormat: formData.emailFormat
                 })
@@ -275,15 +276,17 @@
         const categoryElement = document.querySelector('input[name="category"]:checked');
         const formatElement = document.querySelector('input[name="email-format"]:checked');
         
-        return {
+        const res = {
             deliveryEmail,
             paymentEmail,
             subscriberName: elements.subscriberName.value.trim(),
-            planType: planElement ? planElement.value : 'basic-5',
+            plan: planElement ? planElement.value : 'basic-5',
             category: categoryElement ? categoryElement.value : 'ai',
             emailFormat: formatElement ? formatElement.value : 'html',
             agreeTerms: elements.agreeTerms.checked
         };
+        console.log(res);
+        return res;
     }
     
     // フォームデータバリデーション
@@ -372,6 +375,7 @@
             'privacy': 'privacy',
             'commerce': 'commerce'
         };
+        
         
         const dataKey = dataMap[type];
         if (!dataKey || !legalData[dataKey]) {

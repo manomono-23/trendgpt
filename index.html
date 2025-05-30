@@ -66,23 +66,23 @@
                 </div>
             </div>
             
-            <div id="singleEmail-group" class="form-section">
-                <label for="singleEmail">メールアドレス（個人のメールアドレスのみ）</label>
-                <input type="email" id="singleEmail" required placeholder="your-email@example.com">
+            <div id="single-email-group" class="form-section">
+                <label for="single-email">メールアドレス（個人のメールアドレスのみ）</label>
+                <input type="email" id="single-email" required placeholder="your-email@example.com">
             </div>
             
             <div id="separate-email-group" class="form-section" style="display: none;">
-                <label for="deliveryEmail">配信先メールアドレス（個人のメールアドレスのみ）</label>
-                <input type="email" id="deliveryEmail" placeholder="your-personal-email@example.com">
+                <label for="delivery-email">配信先メールアドレス（個人のメールアドレスのみ）</label>
+                <input type="email" id="delivery-email" placeholder="your-personal-email@example.com">
                 
-                <label for="paymentEmail">支払い用メールアドレス</label>
-                <input type="email" id="paymentEmail" placeholder="billing@yourcompany.com">
+                <label for="payment-email">支払い用メールアドレス</label>
+                <input type="email" id="payment-email" placeholder="billing@yourcompany.com">
                 <small>※ 請求書・領収書の送付先になります</small>
             </div>
             
             <div class="form-section">
-                <label for="subscriberName">登録者名</label>
-                <input type="text" id="subscriberName" required placeholder="山田太郎">
+                <label for="subscriber-name">登録者名</label>
+                <input type="text" id="subscriber-name" required placeholder="山田太郎">
             </div>
             
             <div class="form-section">
@@ -105,6 +105,20 @@
             </div>
             
             <div class="form-section">
+                <label>配信フォーマット選択</label>
+                <div class="format-options">
+                    <div class="format-option">
+                        <input type="radio" name="email-format" value="html" id="format-html" checked>
+                        <label for="format-html">HTML形式</label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" name="email-format" value="plain" id="format-plain">
+                        <label for="format-plain">プレーンテキスト</label>
+                    </div>
+                </div>
+                <p class="note">※ HTML非対応の環境の場合はプレーンテキストをお勧めします</p>
+            </div>
+            <div class="form-section">
                 <label>プラン選択</label>
                 <div class="plan-options">
                     <div class="plan-option" data-plan="basic-5">
@@ -115,6 +129,7 @@
                                 <span class="plan-price">¥480/月</span>
                             </div>
                             <div class="plan-desc">厳選された1日5件の記事をお届け</div>
+                            <div class="plan-trial" style="color: #007BFF; font-weight: bold;">7日間無料トライアルあり</div>
                         </label>
                     </div>
                     
@@ -126,6 +141,7 @@
                                 <span class="plan-price">¥780/月</span>
                             </div>
                             <div class="plan-desc">幅広い情報を1日10件でお届け</div>
+                            <div class="plan-trial" style="color: #007BFF; font-weight: bold;">7日間無料トライアルあり</div>
                         </label>
                     </div>
                     
@@ -137,6 +153,7 @@
                                 <span class="plan-price">¥1,180/月</span>
                             </div>
                             <div class="plan-desc">充実した情報を1日15件でお届け</div>
+                            <div class="plan-trial" style="color: #007BFF; font-weight: bold;">7日間無料トライアルあり</div>
                         </label>
                     </div>
                     
@@ -148,6 +165,7 @@
                                 <span class="plan-price">¥1,580/月</span>
                             </div>
                             <div class="plan-desc">最大限の情報を1日20件でお届け</div>
+                            <div class="plan-trial" style="color: #007BFF; font-weight: bold;">7日間無料トライアルあり</div>
                         </label>
                     </div>
                 </div>
