@@ -34,6 +34,9 @@
         commerce: null
     };
     
+    // データ読み込み完了フラグ
+    let dataLoaded = false;
+    
     // 初期化
     function init() {
         loadLegalData();
@@ -74,6 +77,13 @@
             legalData.commerce = await commerceResponse.json();
             
             console.log('法的文書データの読み込み完了');
+            dataLoaded = true;
+            
+            // データ読み込み完了後にハッシュチェック
+            if (window.location.hash) {
+                handleHashChange();
+            }
+            
         } catch (error) {
             console.error('法的文書の読み込みに失敗:', error);
             // フォールバック用のダミーデータ
@@ -103,6 +113,12 @@
                     }] 
                 }
             };
+            dataLoaded = true;
+            
+            // エラー時もハッシュチェック
+            if (window.location.hash) {
+                handleHashChange();
+            }
         }
     }
     
@@ -138,6 +154,32 @@
                 closeModal();
             }
         });
+    }
+    
+    // アンカーリンク処理
+    function handleAnchorLinks() {
+        // ハッシュ変更時の処理のみ登録（初期ハッシュは loadLegalData で処理）
+        window.addEventListener('hashchange', handleHashChange);
+    }
+    
+    function handleHashChange() {
+        // データ読み込み完了を待つ
+        if (!dataLoaded) {
+            console.log('データ読み込み中のため、ハッシュ処理を延期');
+            return;
+        }
+        
+        const hash = window.location.hash.substring(1); // #を除去
+        const modalMap = {
+            'terms': 'terms',
+            'privacy': 'privacy',
+            'legal': 'commerce',
+            'commerce': 'commerce'
+        };
+        
+        if (modalMap[hash]) {
+            showModal(modalMap[hash]);
+        }
     }
     
     // メールアドレス入力フィールド切り替え
@@ -403,6 +445,11 @@
             elements.modal.style.display = 'none';
         }
         document.body.style.overflow = 'auto';
+        
+        // ハッシュをクリア（履歴を残さない）
+        if (window.location.hash) {
+            history.replaceState('', document.title, window.location.pathname + window.location.search);
+        }
     }
     
     // 法的文書コンテンツフォーマット
@@ -453,5 +500,8 @@
     } else {
         init();
     }
+    
+    // アンカーリンク処理も初期化
+    handleAnchorLinks();
     
   })();
