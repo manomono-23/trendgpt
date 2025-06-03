@@ -2,7 +2,7 @@
     'use strict';
     
     // Stripe初期化
-    const stripe = Stripe('pk_test_51RSFauIZcGrzosQpPDSnddjws2qTa5FhuoSXASL4DdeXcca1bWwPY0QutSBOtTyWCxE0kV71Bs5Ycekt3kSAylyi00bDvZjDGx');
+    const stripe = Stripe('pk_live_51RSFanI6hMO7ein8Tz1fY946nQ3X7shYaEXFnCteyv4UPsIAMZTPiZ8F36j3qWMYqpr5HrlHt0Ji0jz9YwjaIgkz00X44HG62b');
     
     // API URL設定
     const API_BASE_URL = 'https://us-central1-stripe-subscription-manager.cloudfunctions.net/createSubscription';
